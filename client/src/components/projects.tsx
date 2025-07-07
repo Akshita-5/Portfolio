@@ -111,7 +111,7 @@ export default function Projects() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl font-bold text-center mb-16 font-inter text-glow"
+          className="text-2xl md:text-3xl font-bold text-center mb-16 font-inter text-glow"
         >
           Featured Projects
         </motion.h2>
@@ -131,7 +131,7 @@ export default function Projects() {
               </div>
               
               <div className="flex items-center mb-4 min-h-[3rem] flex-wrap">
-                <h3 className={`text-xl lg:text-2xl font-bold mr-3 ${project.featured ? 'text-blue-400' : 'text-white'}`}>
+                <h3 className={`text-lg lg:text-xl font-bold mr-3 ${project.featured ? 'text-blue-400' : 'text-white'}`}>
                   {project.title}
                 </h3>
                 {project.featured && (

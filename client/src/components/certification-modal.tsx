@@ -12,7 +12,7 @@ export default function CertificationModal({ certification, onClose }: Certifica
     <Dialog open={true} onOpenChange={onClose}>
       <DialogContent className="max-w-2xl w-full glass-card border-white/20">
         <DialogHeader>
-          <DialogTitle className="text-3xl font-bold text-blue-400">
+          <DialogTitle className="text-xl md:text-2xl font-bold text-blue-400">
             {certification.title}
           </DialogTitle>
         </DialogHeader>
@@ -22,7 +22,7 @@ export default function CertificationModal({ certification, onClose }: Certifica
             {certification.details.overview}
           </p>
 
-          <h4 className="text-lg font-semibold text-blue-400 mb-3">Key Learning Areas:</h4>
+          <h4 className="text-base font-semibold text-blue-400 mb-3">Key Learning Areas:</h4>
           <ul className="text-white space-y-2 mb-6">
             {certification.details.learningAreas.map((area: string, index: number) => (
               <li key={index}>• {area}</li>

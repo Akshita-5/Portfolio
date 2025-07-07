@@ -82,14 +82,21 @@ export default function Hero() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.5 }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold font-inter mb-8 text-glow leading-tight"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold font-inter mb-8 leading-tight"
+          style={{ textShadow: '0 0 30px rgba(59, 130, 246, 0.8), 0 0 60px rgba(147, 51, 234, 0.6)' }}
         >
           Hi, I'm{" "}
           <motion.span
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 1, type: "spring", stiffness: 50 }}
-            className="gradient-text inline-block"
+            className="inline-block"
+            style={{ 
+              background: 'linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #ffffff 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}
           >
             Akshita Jain
           </motion.span>
@@ -100,7 +107,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.2 }}
-          className="text-lg sm:text-xl md:text-2xl lg:text-4xl text-gray-300 mb-10 font-poppins font-light"
+          className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-10 font-poppins font-light"
         >
           <motion.span
             initial={{ opacity: 0, y: 20 }}

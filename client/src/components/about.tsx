@@ -9,7 +9,7 @@ export default function About() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl font-bold text-center mb-16 font-inter text-glow"
+          className="text-2xl md:text-3xl font-bold text-center mb-16 font-inter text-glow"
         >
           About Me
         </motion.h2>
@@ -24,7 +24,7 @@ export default function About() {
           >
             <div className="flex items-center mb-6">
               <GraduationCap className="h-8 w-8 text-blue-400 mr-4" />
-              <h3 className="text-2xl font-semibold text-blue-400">Education</h3>
+              <h3 className="text-xl font-semibold text-blue-400">Education</h3>
             </div>
             <div className="space-y-4">
               <div className="flex items-start space-x-4">
@@ -48,7 +48,7 @@ export default function About() {
           >
             <div className="flex items-center mb-6">
               <Heart className="h-8 w-8 text-pink-400 mr-4" />
-              <h3 className="text-2xl font-semibold text-pink-400">Personal Summary</h3>
+              <h3 className="text-xl font-semibold text-pink-400">Personal Summary</h3>
             </div>
             <div className="space-y-4">
               <p className="text-gray-300 leading-relaxed">
@@ -77,7 +77,7 @@ export default function About() {
           <div className="glass-card p-6 rounded-2xl hover:scale-105 transition-transform duration-300">
             <div className="flex items-center mb-4">
               <Code className="h-6 w-6 text-purple-400 mr-3" />
-              <h4 className="text-xl font-semibold text-purple-400">Technical Interests</h4>
+              <h4 className="text-lg font-semibold text-purple-400">Technical Interests</h4>
             </div>
             <ul className="space-y-2 text-gray-300">
               <li>• Frontend Development & UI/UX Design</li>
@@ -90,7 +90,7 @@ export default function About() {
           <div className="glass-card p-6 rounded-2xl hover:scale-105 transition-transform duration-300">
             <div className="flex items-center mb-4">
               <Palette className="h-6 w-6 text-blue-400 mr-3" />
-              <h4 className="text-xl font-semibold text-blue-400">Creative Pursuits</h4>
+              <h4 className="text-lg font-semibold text-blue-400">Creative Pursuits</h4>
             </div>
             <ul className="space-y-2 text-gray-300">
               <li>• Showstoppers Dance Crew Member</li>

@@ -13,104 +13,68 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative bg-gradient-to-t from-black via-gray-900/50 to-transparent py-16 px-6 border-t border-white/10">
-      {/* Background decoration */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-32 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute -top-20 right-1/3 w-48 h-48 bg-purple-500/10 rounded-full blur-3xl"></div>
-      </div>
-      
-      <div className="max-w-6xl mx-auto relative z-10">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
-          {/* Brand Section */}
+    <footer className="relative bg-gradient-to-t from-black via-gray-900/50 to-transparent py-12 px-6 border-t border-white/10">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col md:flex-row justify-between items-center mb-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center md:text-left"
+            className="text-center md:text-left mb-6 md:mb-0"
           >
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
+            <h3 className="text-xl font-bold text-white mb-2">
               Akshita Jain
             </h3>
-            <p className="text-gray-400 leading-relaxed">
-              Passionate developer crafting innovative solutions at the intersection of technology and creativity.
+            <p className="text-gray-400 text-sm">
+              Engineering Innovative Tech, Pixel by Pixel
             </p>
           </motion.div>
 
-          {/* Quick Links */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-center"
+            className="flex space-x-6"
           >
-            <h4 className="text-xl font-semibold text-white mb-6">Quick Links</h4>
-            <nav className="space-y-3">
-              {['About', 'Skills', 'Projects', 'Achievements', 'Contact'].map((item) => (
-                <button
-                  key={item}
-                  onClick={() => document.getElementById(item.toLowerCase())?.scrollIntoView({ behavior: 'smooth' })}
-                  className="block mx-auto text-gray-400 hover:text-blue-400 transition-colors duration-300"
-                >
-                  {item}
-                </button>
-              ))}
-            </nav>
-          </motion.div>
-
-          {/* Connect Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-center md:text-right"
-          >
-            <h4 className="text-xl font-semibold text-white mb-6">Let's Connect</h4>
-            <div className="flex justify-center md:justify-end space-x-6 mb-6">
-              {socialLinks.map(({ icon: Icon, href, label }) => (
-                <motion.a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 glass-card rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300 group"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Icon className="h-5 w-5 text-gray-400 group-hover:text-blue-400 transition-colors duration-300" />
-                </motion.a>
-              ))}
-            </div>
-            <p className="text-gray-400 text-sm">
-              Open to collaboration and new opportunities
-            </p>
+            {socialLinks.map(({ icon: Icon, href, label }) => (
+              <motion.a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 glass-card rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300 group"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Icon className="h-4 w-4 text-gray-400 group-hover:text-blue-400 transition-colors duration-300" />
+              </motion.a>
+            ))}
           </motion.div>
         </div>
 
-        {/* Bottom Section */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center"
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center text-center"
         >
-          <div className="flex items-center space-x-2 text-gray-400 mb-4 md:mb-0">
+          <div className="flex items-center space-x-2 text-gray-400 mb-4 sm:mb-0 text-sm">
             <span>Made with</span>
-            <Heart className="h-4 w-4 text-pink-400 fill-current" />
+            <Heart className="h-3 w-3 text-pink-400 fill-current" />
             <span>by Akshita Jain</span>
           </div>
           
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center space-x-4">
             <p className="text-gray-400 text-sm">
-              © 2024 Akshita Jain. All rights reserved.
+              © 2024 All rights reserved.
             </p>
             <motion.button
               onClick={scrollToTop}
-              className="w-10 h-10 glass-card rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
+              className="w-8 h-8 glass-card rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
-              <ArrowUp className="h-4 w-4 text-gray-400 hover:text-blue-400 transition-colors duration-300" />
+              <ArrowUp className="h-3 w-3 text-gray-400 hover:text-blue-400 transition-colors duration-300" />
             </motion.button>
           </div>
         </motion.div>

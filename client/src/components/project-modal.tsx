@@ -12,7 +12,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
     <Dialog open={true} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl w-full max-h-[90vh] overflow-y-auto glass-card border-white/20">
         <DialogHeader>
-          <DialogTitle className="text-3xl font-bold text-blue-400 flex items-center justify-between">
+          <DialogTitle className="text-xl md:text-2xl font-bold text-blue-400 flex items-center justify-between">
             {project.title}
             {project.badge && (
               <span className="text-sm bg-gradient-to-r from-purple-400 to-pink-400 text-white px-3 py-1 rounded-full font-semibold">
@@ -47,12 +47,12 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold mb-4 text-blue-400">Project Overview</h3>
+            <h3 className="text-lg font-semibold mb-4 text-blue-400">Project Overview</h3>
             <p className="text-white mb-6 leading-relaxed">
               {project.details.overview}
             </p>
 
-            <h3 className="text-xl font-semibold mb-4 text-purple-400">Key Features</h3>
+            <h3 className="text-lg font-semibold mb-4 text-purple-400">Key Features</h3>
             <ul className="space-y-2 text-white mb-6">
               {project.details.features.map((feature: string, index: number) => (
                 <li key={index} className="flex items-center space-x-2">
@@ -62,7 +62,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
               ))}
             </ul>
 
-            <h3 className="text-xl font-semibold mb-4 text-pink-400">Technologies Used</h3>
+            <h3 className="text-lg font-semibold mb-4 text-pink-400">Technologies Used</h3>
             <div className="flex flex-wrap gap-2">
               {project.details.technologies.map((tech: string) => (
                 <span key={tech} className="bg-gray-600 text-white px-3 py-1 rounded-full text-sm">
