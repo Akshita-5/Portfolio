@@ -90,7 +90,7 @@ export default function Achievements() {
                     <div className="w-1/2 pr-8 text-right">
                       <span className={`font-semibold ${achievement.color}`}>{achievement.year}</span>
                     </div>
-                    <div className={`w-4 h-4 rounded-full border-4 border-slate-900 z-10 ${achievement.color.replace('text-', 'bg-')}`} />
+                    <div className="w-4 h-4 rounded-full border-4 border-slate-900 z-10 bg-[#a60808]" />
                     <div className="w-1/2 pl-8">
                       <div className="glass-card p-6 rounded-2xl hover:scale-105 transition-transform duration-300">
                         <div className="flex items-center mb-3">
