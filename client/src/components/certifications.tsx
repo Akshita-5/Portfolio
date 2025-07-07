@@ -99,7 +99,7 @@ export default function Certifications() {
           Courses & Certifications
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-8">
           {certifications.map((cert, index) => (
             <motion.div
               key={cert.id}

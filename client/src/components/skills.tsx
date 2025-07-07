@@ -5,8 +5,8 @@ export default function Skills() {
   const skillCategories = [
     {
       title: "Frontend",
-      icon: <Code className="h-8 w-8 text-[var(--neon-blue)]" />,
-      color: "from-[var(--neon-blue)] to-[var(--neon-purple)]",
+      icon: <Code className="h-8 w-8 text-blue-400" />,
+      color: "from-blue-400 to-purple-400",
       skills: [
         { name: "HTML/CSS", level: 95 },
         { name: "JavaScript", level: 90 },
@@ -16,8 +16,8 @@ export default function Skills() {
     },
     {
       title: "Backend & Languages",
-      icon: <Server className="h-8 w-8 text-[var(--neon-purple)]" />,
-      color: "from-[var(--neon-purple)] to-[var(--neon-pink)]",
+      icon: <Server className="h-8 w-8 text-purple-400" />,
+      color: "from-purple-400 to-pink-400",
       skills: [
         { name: "Python", level: 80 },
         { name: "C/C++", level: 75 },
@@ -27,8 +27,8 @@ export default function Skills() {
     },
     {
       title: "Tools & Cloud",
-      icon: <Wrench className="h-8 w-8 text-[var(--neon-pink)]" />,
-      color: "from-[var(--neon-pink)] to-amber-400",
+      icon: <Wrench className="h-8 w-8 text-pink-400" />,
+      color: "from-pink-400 to-amber-400",
       skills: [
         { name: "Git", level: 85 },
         { name: "VS Code", level: 90 },
@@ -50,7 +50,7 @@ export default function Skills() {
           Skills & Technologies
         </motion.h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (
             <motion.div
               key={category.title}

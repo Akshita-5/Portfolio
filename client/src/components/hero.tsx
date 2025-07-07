@@ -82,7 +82,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.5 }}
-          className="text-6xl md:text-8xl font-bold font-inter mb-8 text-glow leading-tight"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold font-inter mb-8 text-glow leading-tight"
         >
           Hi, I'm{" "}
           <motion.span
@@ -100,7 +100,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.2 }}
-          className="text-2xl md:text-4xl text-gray-300 mb-10 font-poppins font-light"
+          className="text-lg sm:text-xl md:text-2xl lg:text-4xl text-gray-300 mb-10 font-poppins font-light"
         >
           <motion.span
             initial={{ opacity: 0, y: 20 }}

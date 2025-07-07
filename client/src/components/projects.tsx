@@ -116,52 +116,52 @@ export default function Projects() {
           Featured Projects
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className={`${project.colSpan || ''} glass-card p-6 rounded-2xl hover:scale-105 transition-all duration-300 group cursor-pointer`}
+              className="glass-card p-6 rounded-2xl hover:scale-105 transition-all duration-300 group cursor-pointer h-full flex flex-col"
               onClick={() => setSelectedProject(project)}
             >
               <div className={`aspect-video bg-gradient-to-br ${project.gradient} rounded-lg mb-6 flex items-center justify-center`}>
                 {project.icon}
               </div>
               
-              <div className="flex items-center mb-4">
-                <h3 className={`text-2xl font-bold mr-3 ${project.featured ? 'text-[var(--neon-blue)]' : 'text-white'}`}>
+              <div className="flex items-center mb-4 min-h-[3rem] flex-wrap">
+                <h3 className={`text-xl lg:text-2xl font-bold mr-3 ${project.featured ? 'text-blue-400' : 'text-white'}`}>
                   {project.title}
                 </h3>
                 {project.featured && (
-                  <span className="bg-gradient-to-r from-[var(--neon-blue)] to-[var(--neon-purple)] px-3 py-1 rounded-full text-sm font-semibold">
+                  <span className="bg-gradient-to-r from-blue-400 to-purple-400 text-white px-3 py-1 rounded-full text-sm font-semibold">
                     Featured
                   </span>
                 )}
                 {project.badge && (
-                  <span className="bg-gradient-to-r from-[var(--neon-purple)] to-[var(--neon-pink)] px-2 py-1 rounded-full text-xs font-semibold">
+                  <span className="bg-gradient-to-r from-purple-400 to-pink-400 text-white px-2 py-1 rounded-full text-xs font-semibold">
                     {project.badge}
                   </span>
                 )}
               </div>
 
-              <p className="text-gray-300 mb-4 text-sm">
+              <p className="text-gray-300 mb-4 text-sm leading-relaxed flex-grow min-h-[4rem]">
                 {project.description}
               </p>
 
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-2 mb-6 min-h-[2.5rem]">
                 {project.tags.map((tag) => (
-                  <span key={tag} className="bg-gray-600 px-3 py-1 rounded-full text-sm">
+                  <span key={tag} className="bg-gray-600 text-white px-3 py-1 rounded-full text-sm">
                     {tag}
                   </span>
                 ))}
               </div>
 
-              <div className="flex space-x-4">
+              <div className="flex flex-col sm:flex-row gap-3 mt-auto">
                 <Button
                   size="sm"
-                  className="bg-gradient-to-r from-[var(--neon-blue)] to-[var(--neon-purple)] hover:scale-105 transition-transform"
+                  className="bg-gradient-to-r from-blue-400 to-purple-400 hover:scale-105 transition-transform text-white flex-1"
                 >
                   <Github className="mr-2 h-4 w-4" />
                   View Code
@@ -169,7 +169,7 @@ export default function Projects() {
                 <Button
                   size="sm"
                   variant="outline"
-                  className="glass-card border-white/20 hover:scale-105 transition-transform"
+                  className="glass-card border-white/20 hover:scale-105 transition-transform text-white hover:text-blue-400 flex-1"
                 >
                   <ExternalLink className="mr-2 h-4 w-4" />
                   Live Demo
