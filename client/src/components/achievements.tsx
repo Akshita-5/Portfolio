@@ -80,7 +80,7 @@ export default function Achievements() {
                         <p className="text-gray-400 text-sm">{achievement.description}</p>
                       </div>
                     </div>
-                    <div className={`w-4 h-4 rounded-full border-4 border-slate-900 z-10 ${achievement.color.replace('text-', 'bg-')}`} />
+                    <div className="w-4 h-4 rounded-full border-4 border-slate-900 z-10 bg-[#64d97e]" />
                     <div className="w-1/2 pl-8">
                       <span className={`font-semibold ${achievement.color}`}>{achievement.year}</span>
                     </div>
