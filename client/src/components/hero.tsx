@@ -4,203 +4,188 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative pt-16 overflow-hidden">
-      {/* Animated Background Elements */}
+    <section id="home" className="min-h-screen flex items-center justify-center relative pt-16 overflow-hidden z-10">
+      {/* V2 Floating Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 0.7, scale: 1 }}
-          transition={{ duration: 2, delay: 0.5 }}
-          className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-float"
+          animate={{ opacity: 0.4, scale: 1 }}
+          transition={{ duration: 3, delay: 0.5 }}
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full mix-blend-screen filter blur-3xl animate-float"
         />
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 0.7, scale: 1 }}
-          transition={{ duration: 2, delay: 1 }}
-          className="absolute top-3/4 right-1/4 w-64 h-64 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full mix-blend-multiply filter blur-xl animate-float"
-          style={{ animationDelay: '-3s' }}
+          animate={{ opacity: 0.4, scale: 1 }}
+          transition={{ duration: 3, delay: 1 }}
+          className="absolute top-3/4 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-600 to-pink-500 rounded-full mix-blend-screen filter blur-3xl animate-float"
+          style={{ animationDelay: '-4s' }}
         />
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 0.5, scale: 1 }}
-          transition={{ duration: 2, delay: 1.5 }}
-          className="absolute top-1/2 left-1/2 w-32 h-32 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full mix-blend-multiply filter blur-xl animate-float"
-          style={{ animationDelay: '-1s' }}
+          animate={{ opacity: 0.3, scale: 1 }}
+          transition={{ duration: 3, delay: 1.5 }}
+          className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full mix-blend-screen filter blur-3xl animate-float"
+          style={{ animationDelay: '-2s' }}
         />
       </div>
 
-      {/* Floating Icons */}
+      {/* Geometric Shapes */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 0.3, y: 0 }}
-          transition={{ duration: 2, delay: 2 }}
-          className="absolute top-20 left-10 text-cyan-400"
-        >
-          <Star className="h-6 w-6 animate-pulse" />
-        </motion.div>
+          initial={{ opacity: 0, rotate: 0 }}
+          animate={{ opacity: 0.1, rotate: 360 }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          className="absolute top-20 left-20 w-24 h-24 border border-blue-400 rotate-45"
+        />
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 0.3, y: 0 }}
-          transition={{ duration: 2, delay: 2.2 }}
-          className="absolute top-32 right-20 text-purple-400"
-        >
-          <Sparkles className="h-8 w-8 animate-pulse" />
-        </motion.div>
+          initial={{ opacity: 0, rotate: 0 }}
+          animate={{ opacity: 0.1, rotate: -360 }}
+          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+          className="absolute bottom-20 right-20 w-32 h-32 border border-purple-400 rounded-full"
+        />
         <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 0.3, x: 0 }}
-          transition={{ duration: 2, delay: 2.4 }}
-          className="absolute bottom-40 left-20 text-pink-400"
-        >
-          <Star className="h-5 w-5 animate-pulse" />
-        </motion.div>
+          initial={{ opacity: 0, y: 0 }}
+          animate={{ opacity: 0.1, y: [-20, 20, -20] }}
+          transition={{ duration: 4, repeat: Infinity }}
+          className="absolute top-40 right-40 w-16 h-16 bg-gradient-to-r from-pink-400 to-purple-400 rotate-45"
+        />
       </div>
 
       <div className="text-center z-10 px-6 max-w-4xl mx-auto">
-        {/* Professional Photo Placeholder */}
+        {/* Professional Photo Placeholder - V2 Style */}
         <motion.div
           initial={{ opacity: 0, scale: 0.5, rotate: -180 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
-          transition={{ duration: 1.2, type: "spring", stiffness: 100 }}
-          className="w-48 h-48 mx-auto mb-8 rounded-full glass-card p-2 relative"
+          transition={{ duration: 1.5, type: "spring", stiffness: 80 }}
+          className="w-56 h-56 mx-auto mb-10 rounded-full glass-card p-3 relative"
         >
-          <div className="w-full h-full bg-gradient-to-br from-cyan-400 via-purple-500 to-pink-500 rounded-full flex items-center justify-center text-4xl font-bold relative overflow-hidden">
+          <div className="w-full h-full bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 rounded-full flex items-center justify-center text-5xl font-bold relative overflow-hidden shadow-2xl">
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 1.2 }}
+              className="absolute inset-0 bg-gradient-to-br from-transparent via-white/30 to-transparent rounded-full animate-pulse"
+            />
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 1 }}
-              className="absolute inset-0 bg-gradient-to-br from-transparent via-white/20 to-transparent rounded-full"
-            />
-            <span className="relative z-10">AJ</span>
+              transition={{ duration: 0.8, delay: 1.5 }}
+              className="relative z-10 font-inter"
+            >
+              AJ
+            </motion.div>
           </div>
         </motion.div>
 
-        {/* Main Heading with Typing Animation */}
+        {/* Main Heading - V2 Style */}
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-5xl md:text-7xl font-bold font-inter mb-6 text-glow"
+          transition={{ duration: 1.2, delay: 0.5 }}
+          className="text-6xl md:text-8xl font-bold font-inter mb-8 text-glow leading-tight"
         >
           Hi, I'm{" "}
           <motion.span
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.6, type: "spring" }}
+            transition={{ duration: 1, delay: 1, type: "spring", stiffness: 50 }}
             className="gradient-text inline-block"
           >
             Akshita Jain
           </motion.span>
         </motion.h1>
 
-        {/* Tagline with Staggered Animation */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
+        {/* V2 Tagline */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-xl md:text-2xl text-gray-300 mb-8 font-outfit"
+          transition={{ duration: 1, delay: 1.2 }}
+          className="text-2xl md:text-4xl text-gray-300 mb-10 font-poppins font-light"
         >
           <motion.span
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 1 }}
-            className="inline-block"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.5 }}
+            className="block mb-2"
           >
-            Engineering
-          </motion.span>{" "}
-          <motion.span
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 1.2 }}
-            className="inline-block text-cyan-400"
-          >
-            Innovative
-          </motion.span>{" "}
-          <motion.span
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 1.4 }}
-            className="inline-block text-purple-400"
-          >
+            Engineering{" "}
+            <span className="text-blue-400 font-medium">Innovative</span>{" "}
             Tech,
-          </motion.span>{" "}
-          <motion.span
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 1.6 }}
-            className="inline-block text-pink-400"
-          >
-            Pixel
-          </motion.span>{" "}
-          <motion.span
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 1.8 }}
-            className="inline-block"
-          >
-            by Pixel
           </motion.span>
-        </motion.p>
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.7 }}
+            className="block text-purple-400 font-medium"
+          >
+            Pixel by Pixel
+          </motion.span>
+        </motion.div>
 
         {/* Description */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
-          className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto"
+          transition={{ duration: 0.8, delay: 1.9 }}
+          className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto font-poppins leading-relaxed"
         >
           Passionate web developer crafting beautiful digital experiences with modern technologies
         </motion.p>
 
-        {/* CTA Buttons */}
+        {/* V2 CTA Buttons */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          transition={{ duration: 1, delay: 2.1 }}
+          className="flex flex-col sm:flex-row gap-6 justify-center items-center"
         >
           <motion.div
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.08, rotateY: 5 }}
             whileTap={{ scale: 0.95 }}
           >
             <Button
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 neon-glow px-8 py-6 text-lg font-semibold"
+              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 transition-all duration-500 neon-glow px-10 py-7 text-xl font-semibold rounded-2xl shadow-2xl"
             >
-              <Eye className="mr-2 h-5 w-5" />
+              <Eye className="mr-3 h-6 w-6" />
               View My Work
             </Button>
           </motion.div>
           <motion.div
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.08, rotateY: -5 }}
             whileTap={{ scale: 0.95 }}
           >
             <Button
               variant="outline"
-              className="glass-card border-white/20 hover:bg-white/10 transition-all duration-300 px-8 py-6 text-lg font-semibold"
+              className="glass-card border-2 border-white/30 hover:bg-white/10 hover:border-white/50 transition-all duration-500 px-10 py-7 text-xl font-semibold rounded-2xl backdrop-blur-xl"
             >
-              <Download className="mr-2 h-5 w-5" />
+              <Download className="mr-3 h-6 w-6" />
               Download Resume
             </Button>
           </motion.div>
         </motion.div>
 
-        {/* Scroll Indicator */}
+        {/* V2 Scroll Indicator */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1.5 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 2.5 }}
+          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 cursor-pointer"
           onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
         >
           <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
+            animate={{ y: [0, 15, 0] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             className="flex flex-col items-center"
           >
-            <ChevronDown className="h-8 w-8 text-cyan-400 mb-2" />
-            <span className="text-xs text-gray-400">Scroll Down</span>
+            <div className="w-6 h-10 border-2 border-blue-400 rounded-full relative mb-4">
+              <motion.div
+                animate={{ y: [0, 12, 0] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                className="w-1 h-3 bg-blue-400 rounded-full absolute left-1/2 top-2 transform -translate-x-1/2"
+              />
+            </div>
+            <span className="text-sm text-gray-400 font-poppins">Scroll to explore</span>
           </motion.div>
         </motion.div>
       </div>

@@ -39,7 +39,7 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-20 px-6 bg-black/20">
+    <section id="skills" className="py-20 px-6 relative z-10">
       <div className="max-w-6xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

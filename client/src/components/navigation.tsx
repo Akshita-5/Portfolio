@@ -48,7 +48,7 @@ export default function Navigation() {
               <button
                 key={item.href}
                 onClick={() => handleNavClick(item.href)}
-                className="hover:text-[var(--neon-blue)] transition-colors duration-300"
+                className="hover:text-blue-400 transition-colors duration-300"
               >
                 {item.label}
               </button>
@@ -68,7 +68,7 @@ export default function Navigation() {
                   <button
                     key={item.href}
                     onClick={() => handleNavClick(item.href)}
-                    className="text-left hover:text-[var(--neon-blue)] transition-colors duration-300"
+                    className="text-left hover:text-blue-400 transition-colors duration-300"
                   >
                     {item.label}
                   </button>
