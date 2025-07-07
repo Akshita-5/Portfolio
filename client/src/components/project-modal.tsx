@@ -24,24 +24,56 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
         <div className="grid md:grid-cols-2 gap-8 mt-6">
           <div>
-            {/* Project mockup */}
-            <div className={`aspect-video bg-gradient-to-br ${project.gradient} rounded-lg flex items-center justify-center mb-6`}>
-              {project.icon}
-            </div>
+            {/* Project Images Section - This is the primary addition */}
+            {project.images && project.images.length > 0 && (
+              <div className="space-y-4 mb-6">
+                <h3 className="text-lg font-semibold text-white">Screenshots / Mockups</h3>
+                <div className="grid grid-cols-1 gap-4">
+                  {project.images.map((imageName: string, index: number) => (
+                    <img
+                      key={index}
+                      src={`/${imageName}`}
+                      alt={`${project.title} screenshot ${index + 1}`}
+                      className="w-full h-auto rounded-lg object-cover shadow-lg"
+                    />
+                  ))}
+                </div>
+              </div>
+            )}
+            {/* End of Project Images Section */}
+
+            {/* Original Project mockup (if still needed, otherwise you might remove it) */}
+            {/* If you want to keep the icon-based mockup, consider its placement relative to images */}
+            {!project.images || project.images.length === 0 && (
+              <div className={`aspect-video bg-gradient-to-br ${project.gradient} rounded-lg flex items-center justify-center mb-6`}>
+                {project.icon}
+              </div>
+            )}
+
 
             <div className="space-y-4">
               <div className="flex space-x-4">
-                <Button className="bg-gradient-to-r from-blue-400 to-purple-400 hover:scale-105 transition-transform text-white">
-                  <Github className="mr-2 h-4 w-4" />
-                  View on GitHub
-                </Button>
-                <Button
-                  variant="outline"
-                  className="glass-card border-white/20 hover:scale-105 transition-transform text-white hover:text-blue-400"
-                >
-                  <ExternalLink className="mr-2 h-4 w-4" />
-                  Live Demo
-                </Button>
+                {/* Conditionally render GitHub button if a link exists */}
+                {project.githubLink && (
+                  <Button
+                    onClick={() => window.open(project.githubLink, '_blank')}
+                    className="bg-gradient-to-r from-blue-400 to-purple-400 hover:scale-105 transition-transform text-white"
+                  >
+                    <Github className="mr-2 h-4 w-4" />
+                    View on GitHub
+                  </Button>
+                )}
+                {/* Conditionally render Live Demo button if a link exists */}
+                {project.liveDemoLink && (
+                  <Button
+                    onClick={() => window.open(project.liveDemoLink, '_blank')}
+                    variant="outline"
+                    className="glass-card border-white/20 hover:scale-105 transition-transform text-white hover:text-blue-400"
+                  >
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    Live Demo
+                  </Button>
+                )}
               </div>
             </div>
           </div>

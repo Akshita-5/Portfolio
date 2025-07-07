@@ -39,7 +39,7 @@ export default function About() {
             </div>
           </motion.div>
 
-          {/* Personal Summary Card */}
+          {/* Updated Personal Summary Card */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -52,22 +52,16 @@ export default function About() {
             </div>
             <div className="space-y-4">
               <p className="text-gray-300 leading-relaxed">
-                Passionate web developer with a keen interest in UI/UX design and AI/ML integration. 
-                I thrive on solving complex problems through innovative technical solutions.
+                I'm a pre-final year B.Tech student in Cyber-Physical Systems, passionate about full-stack development, cybersecurity, and impactful AI applications. I co-founded Axory AI to tackle digital fraud with deep learning.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                Beyond coding, I'm an active member of the Showstoppers dance crew, 
-                bringing creativity and rhythm to both my personal and professional life.
-              </p>
-              <p className="text-gray-300 leading-relaxed">
-                I believe in the perfect balance between technology and design, 
-                creating digital experiences that are both functional and beautiful.
+                I enjoy solving real-world problems through design-centric development and continue to learn and build in fast-paced environments.
               </p>
             </div>
           </motion.div>
         </div>
 
-        {/* Interests Section */}
+        {/* Updated Interests Section */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -79,12 +73,9 @@ export default function About() {
               <Code className="h-6 w-6 text-purple-400 mr-3" />
               <h4 className="text-lg font-semibold text-purple-400">Technical Interests</h4>
             </div>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Frontend Development & UI/UX Design</li>
-              <li>• Cybersecurity & Ethical Hacking</li>
-              <li>• AI/ML Integration in Web Applications</li>
-              <li>• Modern Web Technologies & Frameworks</li>
-            </ul>
+            <p className="text-gray-300 leading-relaxed">
+              Full-Stack Web Development, Cybersecurity, AI/ML, IoT Systems, Scalable Architectures
+            </p>
           </div>
 
           <div className="glass-card p-6 rounded-2xl hover:scale-105 transition-transform duration-300">
@@ -92,12 +83,9 @@ export default function About() {
               <Palette className="h-6 w-6 text-blue-400 mr-3" />
               <h4 className="text-lg font-semibold text-blue-400">Creative Pursuits</h4>
             </div>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Showstoppers Dance Crew Member</li>
-              <li>• Digital Art & Design</li>
-              <li>• Photography & Visual Storytelling</li>
-              <li>• Music Production & Sound Design</li>
-            </ul>
+            <p className="text-gray-300 leading-relaxed">
+              UI/UX Design, Tech Branding, Dance
+            </p>
           </div>
         </motion.div>
       </div>

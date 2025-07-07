@@ -8,6 +8,7 @@ import Certifications from "@/components/certifications";
 import Achievements from "@/components/achievements";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
+import Experience from "@/components/experience"
 
 export default function Home() {
   useEffect(() => {
@@ -45,6 +46,7 @@ export default function Home() {
         <About />
         <Skills />
         <Projects />
+        <Experience />
         <Certifications />
         <Achievements />
         <Contact />

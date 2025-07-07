@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ExternalLink, Github, Target, Shield, Recycle, Bot, Plane } from "lucide-react";
+import { ExternalLink, Github, Target, Shield, Bot, Recycle, Eye, Wand } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import ProjectModal from "./project-modal";
@@ -10,98 +10,94 @@ export default function Projects() {
   const projects = [
     {
       id: "focusmate",
-      title: "Focusmate",
-      description: "A comprehensive productivity and focus tracking platform featuring task management, analytics dashboard, and focus mode with Pomodoro timer integration.",
-      icon: <Target className="h-16 w-16 text-white" />,
-      gradient: "from-[var(--neon-blue)] to-[var(--neon-purple)]",
-      tags: ["React", "Node.js", "MongoDB", "Chart.js"],
+      title: "FocusMate",
+      description: "Productivity web app with task management, Pomodoro, and focus analytics.",
+      icon: <Target className="h-9 w-9 text-white" />,
+      gradient: "from-blue-500 to-purple-600",
+      tags: ["MERN", "Tailwind CSS", "Redux Toolkit", "Framer Motion"],
       featured: true,
-      colSpan: "md:col-span-2 lg:col-span-2",
+      images: ["pic1.jpg", "pic2.jpg"],
       details: {
-        overview: "Focusmate is a comprehensive productivity platform designed to help users manage their tasks, track focus sessions, and analyze their productivity patterns. The application features a modern interface with real-time analytics, Pomodoro timer integration, and collaborative task management capabilities.",
+        overview: "Helps users manage productivity via timers, analytics, and task systems.",
         features: [
-          "Task Management with Priority Levels",
-          "Pomodoro Timer with Custom Intervals",
-          "Analytics Dashboard with Charts",
-          "Focus Mode with Distraction Blocking",
-          "Team Collaboration Features"
+          "Pomodoro Integration", "Real-time Charts", "Task Priority Manager"
         ],
-        technologies: ["React", "Node.js", "MongoDB", "Chart.js", "Express.js", "Socket.io"]
+        technologies: ["MongoDB", "Express", "React", "Node.js", "Redux"]
+      }
+    },
+    {
+      id: "axory-ai",
+      title: "Axory AI",
+      description: "AI-powered fraud detection using deep learning and visual forensics.",
+      icon: <Bot className="h-9 w-9 text-white" />,
+      gradient: "from-purple-500 to-pink-500",
+      tags: ["React", "Flask", "Node.js", "TensorFlow"],
+      badge: "Co-founded",
+      images: ["pic3.jpg", "pic4.jpg"],
+      details: {
+        overview: "Detects digital fraud using AI models and real-time dashboards.",
+        features: [
+          "Deep Learning Analysis", "Real-time Detection", "Threat Dashboards"
+        ],
+        technologies: ["Flask", "React", "Python", "OpenCV"]
       }
     },
     {
       id: "detectify",
       title: "Detectify",
-      description: "Advanced deepfake detection tool developed for Smart India Hackathon 2024. Frontend development with modern UI/UX design.",
-      icon: <Shield className="h-12 w-12 text-white" />,
-      gradient: "from-[var(--neon-purple)] to-[var(--neon-pink)]",
-      tags: ["React", "AI/ML", "TensorFlow"],
+      description: "CNN-based deepfake detection tool for Smart India Hackathon.",
+      icon: <Shield className="h-9 w-9 text-white" />,
+      gradient: "from-red-500 to-orange-500",
+      tags: ["React", "Flask", "Python", "OpenCV"],
       badge: "SIH 2024",
+      images: ["pic5.jpg", "pic6.jpg"],
       details: {
-        overview: "Detectify is an advanced deepfake detection tool developed for Smart India Hackathon 2024. The project aims to combat the growing threat of deepfake technology by providing real-time detection capabilities with high accuracy rates.",
+        overview: "Detects manipulated video using AI and CNN techniques.",
         features: [
-          "Frontend Development with React",
-          "UI/UX Design and Prototyping",
-          "Real-time Video Processing Interface",
-          "Dashboard for Detection Analytics"
+          "CNN Detection", "Real-time Scanning", "Video Accuracy Reports"
         ],
-        technologies: ["React", "TensorFlow", "OpenCV", "Python", "WebRTC"]
+        technologies: ["Python", "Flask", "TensorFlow", "React"]
       }
     },
     {
-      id: "scrap",
-      title: "Scrap Selling Platform",
-      description: "Collaborative web platform for scrap selling with responsive landing page design and full-stack implementation.",
-      icon: <Recycle className="h-12 w-12 text-white" />,
+      id: "scrapmate",
+      title: "ScrapMate",
+      description: "Scrap marketplace platform with responsive UI and real-time APIs.",
+      icon: <Recycle className="h-9 w-9 text-white" />,
       gradient: "from-green-500 to-teal-500",
       tags: ["HTML", "CSS", "JavaScript"],
+      badge: "Vitakaze Labs",
+      images: ["pic7.jpg", "pic8.jpg"],
       details: {
-        overview: "Collaborative web platform for scrap selling with responsive design and full-stack implementation. The project focuses on creating a user-friendly interface for connecting scrap sellers with buyers.",
+        overview: "Connects scrap sellers with buyers via a real-time transactional platform.",
         features: [
-          "Responsive Landing Page Design",
-          "User Authentication System",
-          "Scrap Listing Management",
-          "Buyer-Seller Communication"
+          "Clean UI", "Real-time Transactions", "Inventory Dashboard"
         ],
-        technologies: ["HTML5", "CSS3", "JavaScript", "Git"]
+        technologies: ["JavaScript", "REST APIs", "CSS"]
       }
     },
     {
-      id: "axory",
-      title: "Axory AI",
-      description: "Intelligent automation platform for modern businesses. Designed sleek landing page UI with React and integrated scroll effects using Framer Motion.",
-      icon: <Bot className="h-12 w-12 text-white" />,
-      gradient: "from-orange-500 to-red-500",
-      tags: ["React", "Tailwind CSS", "Framer Motion"],
+      id: "innovision",
+      title: "Innovision",
+      description: "Smart Cane for the visually impaired with sensors and haptic feedback.",
+      icon: <Wand className="h-9 w-9 text-white" />,
+      gradient: "from-yellow-500 to-lime-500",
+      tags: ["Arduino", "Ultrasonic", "GPS", "Infrared"],
+      badge: "Assistive Tech",
+      images: ["pic9.jpg", "pic10.jpg"],
       details: {
-        overview: "Axory AI is an end-to-end intelligent automation system built to streamline repetitive business tasks using machine learning and predictive analytics. The platform offers features like smart document processing, chatbot support, and workflow optimization.",
+        overview: "Assistive device built using CPS principles for real-time obstacle and pothole detection.",
         features: [
-          "Designed sleek, responsive landing page UI using React and Tailwind CSS",
-          "Integrated animated sections with scroll effects using Framer Motion",
-          "Developed feature highlights with interactive cards and modal-based expansion",
-          "Focused on UX-first design with custom illustrations and micro-interactions"
+          "Ultrasonic & IR Sensors",
+          "Haptic Vibration Feedback",
+          "GPS Navigation Integration",
+          "Arduino-based Data Processing",
+          "Pothole & Obstacle Detection",
+          "Real-time Alert System"
         ],
-        technologies: ["React", "Tailwind CSS", "Framer Motion", "SVG animations"]
+        technologies: ["Arduino", "HC-SR04", "IR Sensor", "GPS Module", "C++"]
       }
-    },
-    {
-      id: "drone",
-      title: "MSF Drone Project",
-      description: "Drone-based search and rescue system developed during Dronaid training program with advanced flight control systems.",
-      icon: <Plane className="h-12 w-12 text-white" />,
-      gradient: "from-indigo-500 to-purple-500",
-      tags: ["Python", "IoT", "Robotics"],
-      details: {
-        overview: "Drone-based search and rescue system developed during Dronaid training program with advanced flight control systems. Focuses on humanitarian applications using cutting-edge drone technology.",
-        features: [
-          "Autonomous Flight Control",
-          "Search and Rescue Operations",
-          "Real-time Video Streaming",
-          "GPS Navigation System"
-        ],
-        technologies: ["Python", "IoT", "Robotics", "Computer Vision"]
-      }
-    },
+    }
   ];
 
   return (
@@ -111,68 +107,53 @@ export default function Projects() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-2xl md:text-3xl font-bold text-center mb-16 font-inter text-glow"
+          className="text-2xl md:text-3xl font-bold text-center mb-12 font-inter text-glow"
         >
           Featured Projects
         </motion.h2>
 
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="glass-card p-6 rounded-2xl hover:scale-105 transition-all duration-300 group cursor-pointer h-full flex flex-col"
-              onClick={() => setSelectedProject(project)}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="glass-card p-5 rounded-xl hover:scale-[1.02] transition-all duration-300 cursor-pointer h-full flex flex-col shadow-lg"
             >
-              <div className={`aspect-video bg-gradient-to-br ${project.gradient} rounded-lg mb-6 flex items-center justify-center`}>
+              <div className={`aspect-video bg-gradient-to-br ${project.gradient} rounded-md mb-4 flex items-center justify-center`}>
                 {project.icon}
               </div>
-              
-              <div className="flex items-center mb-4 min-h-[3rem] flex-wrap">
-                <h3 className={`text-lg lg:text-xl font-bold mr-3 ${project.featured ? 'text-blue-400' : 'text-white'}`}>
-                  {project.title}
-                </h3>
+
+              <div className="flex items-center mb-2 flex-wrap gap-2">
+                <h3 className="text-base font-semibold text-white">{project.title}</h3>
                 {project.featured && (
-                  <span className="bg-gradient-to-r from-blue-400 to-purple-400 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                    Featured
-                  </span>
+                  <span className="text-xs bg-blue-500 text-white px-2 py-0.5 rounded-full">Featured</span>
                 )}
                 {project.badge && (
-                  <span className="bg-gradient-to-r from-purple-400 to-pink-400 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                    {project.badge}
-                  </span>
+                  <span className="text-xs bg-pink-500 text-white px-2 py-0.5 rounded-full">{project.badge}</span>
                 )}
               </div>
 
-              <p className="text-gray-300 mb-4 text-sm leading-relaxed flex-grow min-h-[4rem]">
+              <p className="text-sm text-gray-300 mb-3 flex-grow leading-snug min-h-[3.2rem]">
                 {project.description}
               </p>
 
-              <div className="flex flex-wrap gap-2 mb-6 min-h-[2.5rem]">
+              <div className="flex flex-wrap gap-2 mb-4">
                 {project.tags.map((tag) => (
-                  <span key={tag} className="bg-gray-600 text-white px-3 py-1 rounded-full text-sm">
+                  <span key={tag} className="text-xs bg-gray-700 text-white px-2 py-0.5 rounded-full">
                     {tag}
                   </span>
                 ))}
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 mt-auto">
+              <div className="flex flex-col gap-2 mt-auto">
                 <Button
-                  size="sm"
-                  className="bg-gradient-to-r from-blue-400 to-purple-400 hover:scale-105 transition-transform text-white flex-1"
+                  onClick={() => setSelectedProject(project)}
+                  className="bg-gradient-to-r from-blue-400 to-purple-400 text-white w-full text-sm"
                 >
-                  <Github className="mr-2 h-4 w-4" />
-                  View Code
-                </Button>
-                <Button
-                  size="sm"
-                  variant="outline"
-                  className="glass-card border-white/20 hover:scale-105 transition-transform text-white hover:text-blue-400 flex-1"
-                >
-                  <ExternalLink className="mr-2 h-4 w-4" />
-                  Live Demo
+                  <Eye className="mr-2 h-4 w-4" />
+                  View Details
                 </Button>
               </div>
             </motion.div>

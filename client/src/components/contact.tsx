@@ -1,4 +1,4 @@
-import { Mail, Phone, Linkedin, Github, Shield, Code, Brain } from "lucide-react";
+import { Mail, Phone, Linkedin, Github, Shield, Code, Brain, Terminal } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -77,10 +77,10 @@ export default function Contact() {
               <h3 className="text-2xl font-semibold mb-6 text-[var(--neon-purple)]">Contact Information</h3>
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
-                  <Mail className="h-5 w-5 text-[var(--neon-blue)]" />
+                  <Mail className="text-gray-300 hover:text-yellow-300 transition-colors" />
                   <a
                     href="mailto:akshita.rj583@gmail.com"
-                    className="text-gray-300 hover:text-[var(--neon-blue)] transition-colors"
+                    className="text-gray-300 hover:text-yellow-300 transition-colors"
                   >
                     akshita.rj583@gmail.com
                   </a>
@@ -89,7 +89,7 @@ export default function Contact() {
                   <Phone className="h-5 w-5 text-[var(--neon-purple)]" />
                   <a
                     href="tel:+916398550731"
-                    className="text-gray-300 hover:text-[var(--neon-purple)] transition-colors"
+                    className="text-gray-300 hover:text-yellow-300 transition-colors"
                   >
                     +91 6398550731
                   </a>
@@ -100,7 +100,7 @@ export default function Contact() {
                     href="https://www.linkedin.com/in/akshita-jain-2884a7287"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-[var(--neon-blue)] transition-colors"
+                    className="text-gray-300 hover:text-yellow-300 transition-colors"
                   >
                     LinkedIn Profile
                   </a>
@@ -111,11 +111,22 @@ export default function Contact() {
                     href="https://github.com/Akshita-5"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-[var(--neon-pink)] transition-colors"
+                    className="text-gray-300 hover:text-yellow-300 transition-colors"
                   >
                     GitHub Profile
                   </a>
                 </div>
+                <div className="flex items-center space-x-4">
+  <Terminal className="h-5 w-5 text-[var(--neon-pink)]" />
+  <a
+    href="https://leetcode.com/u/Akshita__05/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-gray-300 hover:text-yellow-300 transition-colors"
+  >
+    LeetCode Profile
+  </a>
+</div>
               </div>
             </motion.div>
 
@@ -136,18 +147,13 @@ export default function Contact() {
                 </li>
                 <li className="flex items-center space-x-2">
                   <Code className="h-4 w-4 text-[var(--neon-purple)]" />
-                  <span>Frontend Development</span>
+                  <span>Web Development</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <Brain className="h-4 w-4 text-[var(--neon-pink)]" />
                   <span>AI/ML Integration</span>
                 </li>
               </ul>
-              <div className="mt-6 p-4 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-lg border border-red-500/30">
-                <p className="text-sm text-red-300 font-semibold">
-                  🎯 Goal: Adobe Internship | Adobe Hackathon 2025 Participant
-                </p>
-              </div>
             </motion.div>
           </div>
         </div>

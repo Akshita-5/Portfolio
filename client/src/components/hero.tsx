@@ -4,7 +4,10 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative pt-16 overflow-hidden z-10">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center relative pt-16 overflow-hidden z-10"
+    >
       {/* V2 Floating Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -18,14 +21,14 @@ export default function Hero() {
           animate={{ opacity: 0.4, scale: 1 }}
           transition={{ duration: 3, delay: 1 }}
           className="absolute top-3/4 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-600 to-pink-500 rounded-full mix-blend-screen filter blur-3xl animate-float"
-          style={{ animationDelay: '-4s' }}
+          style={{ animationDelay: "-4s" }}
         />
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 0.3, scale: 1 }}
           transition={{ duration: 3, delay: 1.5 }}
           className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full mix-blend-screen filter blur-3xl animate-float"
-          style={{ animationDelay: '-2s' }}
+          style={{ animationDelay: "-2s" }}
         />
       </div>
 
@@ -57,24 +60,13 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.5, rotate: -180 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ duration: 1.5, type: "spring", stiffness: 80 }}
-          className="w-56 h-56 mx-auto mb-10 rounded-full glass-card p-3 relative"
+          className="w-56 h-56 mx-auto mb-10 rounded-full glass-card p-2 relative"
         >
-          <div className="w-full h-full bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 rounded-full flex items-center justify-center text-5xl font-bold relative overflow-hidden shadow-2xl">
-            <motion.div
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 1.2 }}
-              className="absolute inset-0 bg-gradient-to-br from-transparent via-white/30 to-transparent rounded-full animate-pulse"
-            />
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 1.5 }}
-              className="relative z-10 font-inter"
-            >
-              AJ
-            </motion.div>
-          </div>
+          <img
+            src="./public/profile.jpg"
+            alt="Akshita Jain"
+            className="w-full h-full object-cover rounded-full shadow-xl"
+          />
         </motion.div>
 
         {/* Main Heading - V2 Style */}
@@ -83,61 +75,56 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.5 }}
           className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold font-inter mb-8 leading-tight"
-          style={{ textShadow: '0 0 30px rgba(59, 130, 246, 0.8), 0 0 60px rgba(147, 51, 234, 0.6)' }}
+          style={{
+            textShadow:
+              "0 0 30px rgba(59, 130, 246, 0.8), 0 0 60px rgba(147, 51, 234, 0.6)",
+          }}
         >
           Hi, I'm{" "}
           <motion.span
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 1, type: "spring", stiffness: 50 }}
+            transition={{
+              duration: 1,
+              delay: 1,
+              type: "spring",
+              stiffness: 50,
+            }}
             className="inline-block"
-            style={{ 
-              background: 'linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #ffffff 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
+            style={{
+              background:
+                "linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #ffffff 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
             }}
           >
             Akshita Jain
           </motion.span>
         </motion.h1>
 
-        {/* V2 Tagline */}
+        {/* Updated Professional Tagline */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.2 }}
-          className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-10 font-poppins font-light"
+          className="text-center mb-12"
         >
-          <motion.span
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.5 }}
-            className="block mb-2"
+            className="text-lg sm:text-xl md:text-2xl text-gray-300 font-poppins font-light"
           >
-            Engineering{" "}
-            <span className="text-blue-400 font-medium">Innovative</span>{" "}
-            Tech,
-          </motion.span>
-          <motion.span
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.7 }}
-            className="block text-purple-400 font-medium"
-          >
-            Pixel by Pixel
-          </motion.span>
+            <span className="text-blue-400 font-medium">Web Developer</span>{" "}
+            <span className="text-gray-400">•</span>{" "}
+            <span className="text-purple-400 font-medium">Aspiring SDE</span>{" "}
+            <span className="text-gray-400">•</span>{" "}
+            <span className="text-pink-400 font-medium">
+              Cybersecurity Enthusiast
+            </span>
+          </motion.p>
         </motion.div>
-
-        {/* Description */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.9 }}
-          className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto font-poppins leading-relaxed"
-        >
-          Passionate web developer crafting beautiful digital experiences with modern technologies
-        </motion.p>
 
         {/* V2 CTA Buttons */}
         <motion.div
@@ -151,8 +138,12 @@ export default function Hero() {
             whileTap={{ scale: 0.95 }}
           >
             <Button
-              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 transition-all duration-500 neon-glow px-10 py-7 text-xl font-semibold rounded-2xl shadow-2xl"
+              onClick={() =>
+                document
+                  .getElementById("projects")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 transition-all duration-500 neon-glow px-8 py-7 text-l font-semibold rounded-2xl shadow-2xl"
             >
               <Eye className="mr-3 h-6 w-6" />
               View My Work
@@ -164,16 +155,17 @@ export default function Hero() {
           >
             <Button
               variant="outline"
-              className="glass-card border-2 border-white/30 hover:bg-white/10 hover:border-white/50 transition-all duration-500 px-10 py-7 text-xl font-semibold rounded-2xl backdrop-blur-xl"
+              className="flex glass-card border-2 border-white/30 hover:bg-white/10 hover:border-white/50 transition-all duration-500 px-12 py-7 text-l font-semibold rounded-2xl backdrop-blur-xl"
             >
-              <Download className="mr-3 h-6 w-6" />
-              Download Resume
+              <a href="https://drive.google.com/file/d/11wiQRM7pS1Ni68cW3cjlZRmV8uKGRGkW/view?usp=drive_link">
+                <Download className="mr-3 h-6 w-6" />
+                Download Resume
+              </a>
             </Button>
           </motion.div>
         </motion.div>
-
-        
       </div>
+      <br /><br />
     </section>
   );
 }
