@@ -48,7 +48,7 @@ export default function Navigation() {
               <button
                 key={item.href}
                 onClick={() => handleNavClick(item.href)}
-                className="hover:text-blue-400 transition-colors duration-300"
+                className="hover:text-blue-400 transition-colors duration-300 text-[18px]"
               >
                 {item.label}
               </button>
