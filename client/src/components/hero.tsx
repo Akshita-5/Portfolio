@@ -165,29 +165,7 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* V2 Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 2.5 }}
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 cursor-pointer"
-          onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-        >
-          <motion.div
-            animate={{ y: [0, 15, 0] }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            className="flex flex-col items-center"
-          >
-            <div className="w-6 h-10 border-2 border-blue-400 rounded-full relative mb-4">
-              <motion.div
-                animate={{ y: [0, 12, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="w-1 h-3 bg-blue-400 rounded-full absolute left-1/2 top-2 transform -translate-x-1/2"
-              />
-            </div>
-            <span className="text-sm text-gray-400 font-poppins">Scroll to explore</span>
-          </motion.div>
-        </motion.div>
+        
       </div>
     </section>
   );
