@@ -63,7 +63,7 @@ export default function Hero() {
           className="w-56 h-56 mx-auto mb-10 rounded-full glass-card p-2 relative"
         >
           <img
-            src="./public/profile.jpg"
+            src="/profile.jpg"
             alt="Akshita Jain"
             className="w-full h-full object-cover rounded-full shadow-xl"
           />
@@ -165,7 +165,8 @@ export default function Hero() {
           </motion.div>
         </motion.div>
       </div>
-      <br /><br />
+      <br />
+      <br />
     </section>
   );
 }
