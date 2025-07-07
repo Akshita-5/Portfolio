@@ -13,7 +13,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative bg-gradient-to-t from-black via-gray-900/50 to-transparent py-12 px-6 border-t border-white/10">
+    <footer className="relative from-black via-gray-900/50 to-transparent py-12 px-6 border-t border-white/10 bg-[#10172c]">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
           <motion.div
