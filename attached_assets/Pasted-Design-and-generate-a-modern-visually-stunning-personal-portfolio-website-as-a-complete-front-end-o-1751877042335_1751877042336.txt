@@ -1,0 +1,94 @@
+Design and generate a modern, visually stunning personal portfolio website as a complete front-end-only React application using Vite and JSX. The site should not include any backend, API integration, or external databases. The content must be based entirely on the provided user profile and resume details.
+
+The portfolio must reflect creativity, clarity, and technical skills. Use React functional components, Tailwind CSS or styled-components for styling, and integrate subtle animations with Framer Motion or CSS transitions to elevate user engagement.
+
+Structure the site into these key sections:
+
+Landing/Home Page
+
+Include a bold hero section with a background animation, large introduction text like "Hi, I'm Akshita Jain", and a short impactful tagline like "Engineering Innovative Tech, Pixel by Pixel".
+
+Include a professional photo placeholder and a smooth scroll-down button that transitions to the next section.
+
+Add a minimalist navbar at the top with a glassmorphism or neon theme, and smooth scrolling navigation links.
+
+About Me
+
+Present educational background: Bachelor of Technology in Cyber Physical Systems at Manipal Institute of Technology (Aug 2022 – May 2026).
+
+Include a friendly personal summary highlighting passion for web development, interest in UI/UX, AI/ML integration, and problem-solving mindset.
+
+Mention participation in Showstoppers dance crew and passion for tech and design balance.
+
+Skills
+
+Display technical skills in visually interactive cards or animated circular progress charts.
+
+Skills: HTML, CSS, JavaScript, React, Tailwind CSS, C, C++, Python, SQL, Git, VS Code, Google Cloud Platform, Microsoft Azure.
+
+Use a vibrant grid or tabbed layout to categorize frontend, backend, and tools.
+
+Projects
+
+Display each project as a large card or carousel with screenshots, project name, description, technologies used, and GitHub link.
+
+Key projects include:
+a. Focusmate: A productivity and focus tracking platform featuring task management, analytics, and focus mode. Add animated mockups or interaction previews. Emphasize this project visually as the most prominent.
+b. Scrap Selling Website: Designed landing page and collaborated on full site with HTML, CSS, JS, Git.
+c. Portfolio Website: Created with React and deployed.
+d. Tic Tac Toe: A basic JS game built with interactive UI.
+e. MSF-Surface-9-Pro Drone Task: Built during Dronaid training.
+
+Use modal popups or expand-on-click for project details.
+
+Achievements and Experience
+
+Use vertical timeline UI or animated cards.
+
+Mention:
+a. Organizing committee, Manipal Hackathon 2023
+b. Web & system team, Tech Tatva ’23
+c. Dronaid Recruit (Drone-based search & rescue training)
+d. Smart India Hackathon 2024: Worked on Detectify, a deepfake detection tool. Role: frontend + UI. Include Detectify as a special highlight in the projects section as well.
+
+Internship
+
+Add a section with card layout for internship experience (include both ongoing and previous).
+
+Emphasize goal of landing Adobe internship, participation in Adobe Hackathon 2025.
+
+Mention interest in software development internships in cybersecurity, frontend, or AI-based domains.
+
+Contact Section
+
+Include a modern styled contact form (no backend, just UI).
+
+Add icons and clickable links for:
+
+LinkedIn: www.linkedin.com/in/akshita-jain-2884a7287
+
+GitHub: https://github.com/Akshita-5
+
+Email: akshita.rj583@gmail.com
+
+Phone: +91 6398550731
+
+UI and Design Requirements
+
+The design must be highly impressive and clean, using modern UI/UX principles.
+
+Use glassmorphism, neon glow, or soft shadowed cards for modern appeal.
+
+Include animations such as scroll-triggered fade-ins, card hover effects, staggered entry of elements, and responsive layout transitions.
+
+Ensure full responsiveness for all screen sizes.
+
+Add animated SVGs, Lottie animations, or subtle background particle effects where suitable.
+
+Use custom fonts and smooth transitions between pages.
+
+Prioritize aesthetics while maintaining fast performance and clear readability.
+
+The site must be fully written in JSX components with CSS-in-JS or Tailwind CSS styling. Avoid using class-based components or old UI frameworks. Ensure modular file structure and maintainable code. All animations should be smooth and not excessive.
+
+Do not include any server-side code, backend APIs, or database logic. This must be a purely frontend React project built with Vite that showcases an exceptional, visually engaging developer portfolio.
