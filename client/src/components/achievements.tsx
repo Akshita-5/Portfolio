@@ -55,7 +55,7 @@ export default function Achievements() {
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-[var(--neon-blue)] to-[var(--neon-purple)] rounded-full" />
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full from-[var(--neon-blue)] to-[var(--neon-purple)] rounded-full bg-[#8d76ff]" />
 
           <div className="space-y-12">
             {achievements.map((achievement, index) => (
