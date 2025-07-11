@@ -1,6 +1,11 @@
 import { X, Github, ExternalLink, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 interface ProjectModalProps {
   project: any;
@@ -27,7 +32,9 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             {/* Project Images Section - This is the primary addition */}
             {project.images && project.images.length > 0 && (
               <div className="space-y-4 mb-6">
-                <h3 className="text-lg font-semibold text-white">Screenshots / Mockups</h3>
+                <h3 className="text-lg font-semibold text-white">
+                  Screenshots / Mockups
+                </h3>
                 <div className="grid grid-cols-1 gap-4">
                   {project.images.map((imageName: string, index: number) => (
                     <img
@@ -40,23 +47,21 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 </div>
               </div>
             )}
-            {/* End of Project Images Section */}
-
-            {/* Original Project mockup (if still needed, otherwise you might remove it) */}
-            {/* If you want to keep the icon-based mockup, consider its placement relative to images */}
-            {!project.images || project.images.length === 0 && (
-              <div className={`aspect-video bg-gradient-to-br ${project.gradient} rounded-lg flex items-center justify-center mb-6`}>
-                {project.icon}
-              </div>
-            )}
-
+            {!project.images ||
+              (project.images.length === 0 && (
+                <div
+                  className={`aspect-video bg-gradient-to-br ${project.gradient} rounded-lg flex items-center justify-center mb-6`}
+                >
+                  {project.icon}
+                </div>
+              ))}
 
             <div className="space-y-4">
               <div className="flex space-x-4">
                 {/* Conditionally render GitHub button if a link exists */}
                 {project.githubLink && (
                   <Button
-                    onClick={() => window.open(project.githubLink, '_blank')}
+                    onClick={() => window.open(project.githubLink, "_blank")}
                     className="bg-gradient-to-r from-blue-400 to-purple-400 hover:scale-105 transition-transform text-white"
                   >
                     <Github className="mr-2 h-4 w-4" />
@@ -66,12 +71,12 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 {/* Conditionally render Live Demo button if a link exists */}
                 {project.liveDemoLink && (
                   <Button
-                    onClick={() => window.open(project.liveDemoLink, '_blank')}
+                    onClick={() => window.open(project.liveDemoLink, "_blank")}
                     variant="outline"
                     className="glass-card border-white/20 hover:scale-105 transition-transform text-white hover:text-blue-400"
                   >
                     <ExternalLink className="mr-2 h-4 w-4" />
-                    Live Demo
+                    View Live
                   </Button>
                 )}
               </div>
@@ -79,25 +84,36 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-blue-400">Project Overview</h3>
+            <h3 className="text-lg font-semibold mb-4 text-blue-400">
+              Project Overview
+            </h3>
             <p className="text-white mb-6 leading-relaxed">
               {project.details.overview}
             </p>
 
-            <h3 className="text-lg font-semibold mb-4 text-purple-400">Key Features</h3>
+            <h3 className="text-lg font-semibold mb-4 text-purple-400">
+              Key Features
+            </h3>
             <ul className="space-y-2 text-white mb-6">
-              {project.details.features.map((feature: string, index: number) => (
-                <li key={index} className="flex items-center space-x-2">
-                  <Check className="h-4 w-4 text-blue-400 flex-shrink-0" />
-                  <span>{feature}</span>
-                </li>
-              ))}
+              {project.details.features.map(
+                (feature: string, index: number) => (
+                  <li key={index} className="flex items-center space-x-2">
+                    <Check className="h-4 w-4 text-blue-400 flex-shrink-0" />
+                    <span>{feature}</span>
+                  </li>
+                )
+              )}
             </ul>
 
-            <h3 className="text-lg font-semibold mb-4 text-pink-400">Technologies Used</h3>
+            <h3 className="text-lg font-semibold mb-4 text-pink-400">
+              Technologies Used
+            </h3>
             <div className="flex flex-wrap gap-2">
               {project.details.technologies.map((tech: string) => (
-                <span key={tech} className="bg-gray-600 text-white px-3 py-1 rounded-full text-sm">
+                <span
+                  key={tech}
+                  className="bg-gray-600 text-white px-3 py-1 rounded-full text-sm"
+                >
                   {tech}
                 </span>
               ))}
